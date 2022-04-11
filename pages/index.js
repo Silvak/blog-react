@@ -5,12 +5,16 @@ import { getPosts } from '../services'
 
 export default function Home({posts}) {
   return (
-    <div className="container mx-auto px-10 mb-8">
+    <div className="container mx-auto px-6 mb-8">
       <Head>
         <title>Blog React</title>
         <meta name="description" content="Blog react app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <div className='w-full h-20 bg-[#ffd300] mb-12'>
+          
+      </div>
 
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
         <div className='col-span-1 lg:col-span-8'>
@@ -18,7 +22,7 @@ export default function Home({posts}) {
         </div>
       
         <div className='col-span-1 lg:col-span-4'>
-          <div className='relative lg:sticky top-8'>
+          <div className='relative lg:sticky top-28'>
             <PostWidget/>
             <Categories/>
           </div>

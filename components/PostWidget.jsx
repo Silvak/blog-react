@@ -17,10 +17,11 @@ const PostWidget = ({categories, slug}) => {
   }, [slug]);
 
   return (
-    <div className='bg-white shadow-lg rounded-lg p-8 mb-8'>
-      <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
+    <div className='bg-white borde mb-8 rounded-lg'>
+      <h3 className='text-xl mb-8  w-full bg-[#0f1630] text-white px-8 py-2 font-semibold border-b rounded-t-lg'>
         {slug ? 'Related Posts' : 'Recent Posts'}
       </h3>
+      <div className='px-8 pb-8'>
         {posts.map((post) =>(
           <div key={post.title} className="flex items-center w-full mb-4">
             <div className='w-16 flex-none'>
@@ -28,7 +29,7 @@ const PostWidget = ({categories, slug}) => {
                 alt={post.title}
                 height="60px"
                 width="60px"
-                className='align-middle rounded-full'
+                className='object-cover h-full w-full align-middle'
                 src={post.featuredImage.url}
               />
             </div>
@@ -43,6 +44,7 @@ const PostWidget = ({categories, slug}) => {
             </div>
           </div>
         ))}
+        </div>
     </div>
   )
 }

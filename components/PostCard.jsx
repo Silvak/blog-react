@@ -1,34 +1,34 @@
 import React from 'react'
 import  moment from 'moment'
 import Link from 'next/link'
-
+import Image from 'next/image'
 
 const PostCard = ({post}) => {
   return (
-    <div className='bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
-        <div className='relative overflow-hidden shadow-md pb-80 mb-6'>
+    <div className='bg-white p-0 lg:p-8 pb-12 mb-8 rounded-lg'>
+        <div className='flex mb-6 relative '>
           <img
             src={post.featuredImage.url} 
             alt={post.title}
-            className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
+            className="object-top z-10 inset-0 h-full w-full rounded-t-lg"
           />
         </div>
         <h1 
           className='transition duration-100 text-center mb-8 
-          cursor-pointer hover:text-pink-600 text-3xl font-semibold
+          cursor-pointer hover:text-[#3b10e3] text-3xl font-semibold
           '
         >
           <Link href={`/post/${post.slug}`}>
             {post.title}
           </Link>
         </h1>
-        <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
-          <div className='flex items-center justify-center mb-4 lg:mb-0 lg:w-auto lg:mr-8'>
+        <div className='block lg:flex text-center items-center justify-center mb-5 w-full'>
+          <div className='flex justify-center  mb-4 lg:mb-0 lg:w-auto lg:mr-8'>
             <img
               alt={post.author.name}
               height="30px"
               width="30px"
-              className='align-middle rounded-full'
+              className='object-cover align-middle rounded-full'
               src={post.author.photo.url}
             />
             <p className='inline align-middle text-gray-700 ml-2 text-lg'>{post.author.name}</p>
@@ -42,16 +42,31 @@ const PostCard = ({post}) => {
             </span>
           </div>
         </div>
-        <p className='text-center text-lg text-grey-700 font-normal px-4 lg:px-2 mb-8'>{post.excerpt}</p>
-        <div className='text-center cursor-pointer'>
-          <Link href={`/post/${post.slug}`}>
-            <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3">
-              Continuos Reading
-            </span>
-          </Link>
+        <p className='text-center text-md text-grey-700 font-normal px-4 lg:px-2 mb-8'>{post.excerpt}</p>
+        <div className='flex justify-center'>
+            <div 
+              className='transition before:duration-200  transform relative before:absolute  
+              hover:before:translate-y-1 hover:before:-translate-x-1 before:w-full before:h-full before:bg-[#10162f]'
+            >
+              <Link href={`/post/${post.slug}`} >
+                <span 
+                  className='cursor-pointer transition duration-200 transform hover:-translate-y-1 hover:translate-x-1 
+                  inline-block bg-[#3b10e3]  text-lg font-medium  border border-[#10162f]  text-white px-4 py-3 z-20'
+                >
+                  Continuos Reading
+                </span>
+              </Link>
+            </div>
         </div>
-    </div>
+
+     </div>
+        
   )
 }
 
+/*
+<div class="flex-none w-48 mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-teal-400">
+    <img src="/retro-shoe.jpg" alt="" class="absolute z-10 inset-0 w-full h-full object-cover rounded-lg" />
+  </div>
+*/
 export default PostCard
