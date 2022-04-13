@@ -6,11 +6,11 @@ import Image from 'next/image'
 const PostCard = ({post}) => {
   return (
     <div className='bg-white p-0 lg:p-8 pb-12 mb-8 border border-gray-300'>
-        <div className='flex mb-6 relative '>
+        <div className='flex h-72 mb-6 relative '>
           <img
             src={post.featuredImage.url} 
             alt={post.title}
-            className="object-top z-10 inset-0 h-full w-full"
+            className="object-cover z-10 inset-0 h-full w-full"
           />
         </div>
         <h1 
