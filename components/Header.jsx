@@ -12,7 +12,7 @@ const Header = () => {
   }, [])
 
   return (
-    <div className='sticky top-0 z-50 mb-12 px-8 border-b border-black bg-white'>
+    <div className='sticky top-0 z-50 mb-8 px-8 border-b border-black bg-white'>
         <div className=' inline-block w-full py-4'>
             <div className='md:float-left block'>
                 <Link href="/">
