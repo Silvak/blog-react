@@ -64,9 +64,5 @@ const PostCard = ({post}) => {
   )
 }
 
-/*
-<div class="flex-none w-48 mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-teal-400">
-    <img src="/retro-shoe.jpg" alt="" class="absolute z-10 inset-0 w-full h-full object-cover rounded-lg" />
-  </div>
-*/
+
 export default PostCard
