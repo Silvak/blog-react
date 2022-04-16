@@ -4,23 +4,27 @@ import Image from 'next/image'
 
 const Author = ({author}) => {
   return (
-    <div className='text-center mt-20 mb-8 p-8 relative rounded-lg bg-blue-500 bg-opacity-20'>
-      <div className='absolute left-0 right-0 -top-14'>
-        <Image
-          alt={author.name}
-          unoptimized
-          height="80px"
-          width="80px"
-          className='align-middle rounded-full'
-          src={author.photo.url}
-        />
+    <div className='relative border border-[#fef0e5] mt-12 mb-12'
+    style={{ backgroundImage: `url('https://images.vexels.com/media/users/3/157944/isolated/preview/b6a72d46f16e457ccfacf410edc462a6-dots-grid-design.png')` }}
+    >
+      <div className='flex justify-around p-2 m-8 lg:m-14 bg-[#fef0e5]'>
+        <div className='w-20 h-20  p-2 border border-[#0f1630]' style={{minWidth:"64px"}}>
+          <img
+            alt={author.name}
+            src={author.photo.url}
+            className='object-containt align-middle'
+          />
+          
+        </div>
+        <p className='m-auto pl-4 text-sm lg:text-md'>
+          <span className='text-left text-lg font-bold block mb-2'>
+            {author.name}
+          </span>
+          {author.bio}
+        </p>
       </div>
-      <h3 className='text-white my-4 text-xl font-bold'>
-        {author.name}
-      </h3>
-      <p className='text-white text-lg'>
-        {author.bio}
-      </p>
+      
+      
     </div>
   )
 }
