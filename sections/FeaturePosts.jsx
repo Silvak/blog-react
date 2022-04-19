@@ -34,7 +34,7 @@ const FeaturedPosts = () => {
       setDataLoaded(true);
     });
   }, []);
-
+  
   const customLeftArrow = (
     <div className="absolute arrow-btn left-0 py-3 flex justify-center cursor-pointer bg-[#ffd300]">
       <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-[#101630]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -44,12 +44,15 @@ const FeaturedPosts = () => {
   );
 
   const customRightArrow = (
-    <div className="absolute arrow-btn right-0 py-3 flex justify-center cursor-pointer bg-[#ffd300]">
+    <div className="absolute arrow-btn right-0 w-72 py-3 flex justify-center cursor-pointer bg-[#ffd300]">
       <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-[#101630]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
       </svg>
     </div>
   );
+
+//customLeftArrow={customLeftArrow} customRightArrow={customRightArrow}
+
 
   return (
     <div className="mb-8">
@@ -63,3 +66,5 @@ const FeaturedPosts = () => {
 };
 
 export default FeaturedPosts;
+
+

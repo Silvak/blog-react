@@ -6,11 +6,7 @@ import { FeaturePosts } from '../sections'
 export default function Home({posts}) {
   return (
     <div className="container mx-auto px-6 mb-8">
-      <Head>
-        <title>Blog React</title>
-        <meta name="description" content="Blog react app" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+     
       <FeaturePosts />
       
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
@@ -26,15 +22,9 @@ export default function Home({posts}) {
         </div>
       
         <div className='col-span-1 lg:col-start-9 lg:col-span-4'>
-          <div className='relative lg:sticky top-[16%] '>
+          <div className='relative lg:sticky top-[16%]'>
             <PostWidget/>
             <Categories/>
-            <div className='w-full h-60 bg-[#ffd300] mb-8'>
-              <img 
-                src='https://images.unsplash.com/photo-1592659762303-90081d34b277?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80'
-                className='object-cover w-full h-full'
-              />
-            </div>
           </div>
         </div>
         
