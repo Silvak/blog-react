@@ -20,9 +20,7 @@ const PostDetails = ({ post }) => {
                 <Comments slug={post.slug}/>
             </div>
             <div className='col-span-1 lg:col-span-4'>
-
-                <div className='relative lg:sticky top-[16%]'>
-
+                <div className='relative lg:sticky lg:top-[16%]'>
                     <PostWidget 
                         slug={post.slug} 
                         categories={post.categories.map((category)=> category.slug)}

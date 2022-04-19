@@ -1,8 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import Link from 'next/link'
 import { getCategories } from '../services'
-import Logo from '../public/Logo.svg'
-import Image from 'next/image'
+
 
 const Header = () => {
   const [categories, setCategories] =  useState([]);
@@ -13,28 +12,23 @@ const Header = () => {
   }, [])
 
   return (
-    <div className='sticky top-0 z-50 mb-8 md:px-8 px-6 py-2 border-b border-black bg-white'>
-        <div className='flex md:w-full justify-between'>
-            <div className='md:float-left flex'>
-                <Image
-                    height="50px" 
-                    width="50px" 
-                    src={Logo} alt="SVG as an image"
-                />
+    <div className='sticky top-0 z-50 mb-8 px-8 border-b border-black bg-white'>
+        <div className=' inline-block w-full py-4'>
+            <div className='md:float-left block'>
                 <Link href="/">
-                    <span className='m-auto pl-1 cursor-pointer font-bold text-3xl text-black hover:text-[#3b10e3] transition duration-100'>
-                        Borealis
+                    <span className='cursor-pointer font-bold text-3xl text-black hover:text-[#3b10e3] transition duration-100'>
+                        Blog React
                     </span>
                 </Link>
             </div>
-            <div className='hidden md:inline-block my-auto'>
-                    {categories.map((category)=>(
-                        <Link key={category.slug} href={`/category/${category.slug}`}>
-                            <span className='p-2 text-black font-semibold cursor-pointer border border-white hover:border-[#3b10e3]  hover:text-[#3b10e3] transition duration-100'>
-                                {category.name}
-                            </span>
-                        </Link>
-                    ))}
+            <div className='hidden md:float-left md:contents'>
+                {categories.map((category)=>(
+                    <Link key={category.slug} href={`/category/${category.slug}`}>
+                        <span className='md:float-right mt-2 align-middle text-black ml-4 font-semibold cursor-pointer hover:text-[#3b10e3] transition duration-100'>
+                            {category.name}
+                        </span>
+                    </Link>
+                ))}
             </div>
         </div>
     </div>
