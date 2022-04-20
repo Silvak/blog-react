@@ -8,7 +8,7 @@ const FeaturedPostCard = ({ post }) => (
     className='transition before:duration-200  transform relative before:absolute  
     hover:before:translate-y-1 hover:before:-translate-x-1 before:w-full before:h-full before:bg-[#10162f] my-2'
   >
-    <div className='cursor-pointer transition duration-200 transform hover:-translate-y-1 hover:translate-x-1  border border-[#10162f] hover:border-indigo-400 z-20'>
+    <div className='cursor-pointer transition duration-200 transform hover:-translate-y-1 hover:translate-x-1  border border-[#10162f] hover:border-indigo-700 z-20'>
      
       <div className="relative h-72 w-full">
         <div className="absolute bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-72" style={{ backgroundImage: `url('${post.featuredImage.url}')` }} />

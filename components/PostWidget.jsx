@@ -22,12 +22,6 @@ const PostWidget = ({categories, slug}) => {
         {slug ? 'Related Posts' : 'Recent Posts'}
       </h3>
       <div className='absolute top-3 right-5'>X</div>
-
-      <div className='hidden lg:block w-[30vw] h-72 overflow-hidden absolute bottom-[-26px] right-[-50px]   z-[-1]'>
-          <img
-            src='https://images.vexels.com/media/users/3/157944/isolated/preview/b6a72d46f16e457ccfacf410edc462a6-diseno-de-cuadricula-de-puntos.png'
-          />
-      </div>
       
       <div className='px-8 pb-4'>
 

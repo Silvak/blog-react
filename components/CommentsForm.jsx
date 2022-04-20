@@ -50,8 +50,8 @@ const CommentsForm = ({slug}) => {
 
 
   return (
-    <div className='bg-white border p-8 pb-12 mb-8'>
-        <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Leave a Reply</h3>
+    <div className='bg-white border px-8 pt-8 pb-4 mb-8'>
+        <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Leave a Comment</h3>
         <div className='grid grid-cols-1 gap-4 mb-4'> 
           <textarea 
             ref={commentEl} 
@@ -89,15 +89,23 @@ const CommentsForm = ({slug}) => {
           </div>
         </div>
         {error && <p className='text-xs text-red-500'>All fields are required.</p>}
-        <div className='mt-8'>
-          <button 
-            type='button' 
-            onClick={handleCommentSubmission}
-            className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-pink-600 text-lg  text-white px-8 py-3 cursor-pointer"
-          >
-            Post Comment              
-          </button>
-          {showSuccessMessage && <span className='inline text-center text-xl float-right font-semibold mt-3 text-green-500'>Comment submitted for review</span>}
+
+        <div className='flex justify-center'>
+            <div 
+              className='transition before:duration-200  transform relative before:absolute  
+              hover:before:translate-y-1 hover:before:-translate-x-1 before:w-full before:h-full before:bg-[#10162f]'
+            >
+                <button  
+                  onClick={handleCommentSubmission}
+                  className='cursor-pointer transition duration-200 transform hover:-translate-y-1 hover:translate-x-1 
+                  inline-block bg-[#3b10e3]  text-lg font-medium  border border-[#10162f]  text-white px-4 py-3 z-20'
+                >
+                  Continuos Reading
+                  </button>
+            </div>
+        </div>
+        <div className='w-full h-6 flex mt-2'>
+        {showSuccessMessage && <span className='m-auto font-semibold text-sm text-green-500'>Comment submitted for review</span>}
         </div>
     </div>
   )

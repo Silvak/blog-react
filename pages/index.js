@@ -3,6 +3,7 @@ import { PostCard, Categories, PostWidget} from '../components'
 import { getPosts } from '../services'
 import { FeaturePosts } from '../sections'
 
+
 export default function Home({posts}) {
   return (
     <div className="container mx-auto px-4 md:px-6 mb-8">
