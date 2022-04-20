@@ -35,7 +35,7 @@ export default function Home({posts}) {
             <Categories/>
             <div className='w-full h-60 bg-[#ffd300] mb-8'>
               <img 
-                src='https://images.unsplash.com/photo-1592659762303-90081d34b277?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80'
+                src='https://images.unsplash.com/photo-1505356822725-08ad25f3ffe4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8eWVsbG93fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
                 className='object-cover w-full h-full'
               />
             </div>
