@@ -23,7 +23,7 @@ const PostWidget = ({categories, slug}) => {
       </h3>
       <div className='absolute top-3 right-5'>X</div>
 
-      <div className='absolute bottom-[-130px] right-[0] w-[400px] h-[400px]  z-[-1]'>
+      <div className='hidden lg:block w-[30vw] h-72 overflow-hidden absolute bottom-[-26px] right-[-50px]   z-[-1]'>
           <img
             src='https://images.vexels.com/media/users/3/157944/isolated/preview/b6a72d46f16e457ccfacf410edc462a6-diseno-de-cuadricula-de-puntos.png'
           />

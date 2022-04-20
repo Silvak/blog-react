@@ -5,7 +5,7 @@ import { FeaturePosts } from '../sections'
 
 export default function Home({posts}) {
   return (
-    <div className="container mx-auto px-6 mb-8">
+    <div className="container mx-auto px-4 md:px-6 mb-8">
       <Head>
         <title>Blog React</title>
         <meta name="description" content="Blog react app" />
@@ -29,7 +29,7 @@ export default function Home({posts}) {
         </div>
       
         <div className='col-span-1 lg:col-start-9 lg:col-span-4'>
-          <div className='relative lg:sticky top-[16%] '>
+          <div className='lg:relative lg:sticky top-[16%] '>
             <PostWidget/>
             <Categories/>
             <div className='w-full h-60 bg-[#ffd300] mb-8'>
