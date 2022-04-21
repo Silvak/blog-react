@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import moment from 'moment'
 import Link from 'next/link'
 import { getRecentPosts, getSimilarPosts } from '../services'
+import Image from 'next/image'
+
 
 const PostWidget = ({categories, slug}) => {
   const [posts, setPosts] = useState([]);
@@ -26,12 +28,15 @@ const PostWidget = ({categories, slug}) => {
       <div className='px-8 pb-4'>
 
         {posts.map((post) =>(
-          <Link href={`/post/${post.slug}`} key={post.title} className="text-md">
+          <Link href={`/post/${post.slug}`} key={post.title} passHref={true} className="text-md">
             <div key={post.title} className="flex items-center w-full h-14 mb-3 cursor-pointer border-l-4 border-white hover:border-indigo-600 hover:bg-indigo-100 overflow-hidden">
-              <div className='w-14 h-14 flex-none'>
-                <img 
+              <div className='w-14 h-14 flex min-w-[56px]'>
+                <Image 
+                  unoptimized
+                  height={56}
+                  width={56}
                   alt={post.title}
-                  className='object-cover h-full w-full align-middle'
+                  className='object-cover align-middle'
                   src={post.featuredImage.url}
                 />
               </div>

@@ -6,8 +6,9 @@ import Image from 'next/image'
 const PostCard = ({post}) => {
   return (
     <div className='bg-white p-0 lg:p-8 pb-12 mb-8 border border-gray-300'>
-        <div className='flex h-72 mb-6 relative '>
-          <img
+        <div className='flex h-72 mb-6 relative'>
+          <Image
+            layout="fill"
             src={post.featuredImage.url} 
             alt={post.title}
             className="object-cover z-10 inset-0 h-full w-full"
@@ -18,13 +19,13 @@ const PostCard = ({post}) => {
           cursor-pointer hover:text-[#3b10e3] text-3xl font-semibold
           '
         >
-          <Link href={`/post/${post.slug}`}>
+          <Link href={`/post/${post.slug}`} passHref={true}>
             {post.title}
           </Link>
         </h1>
         <div className='block lg:flex text-center items-center justify-center mb-5 w-full'>
           <div className='flex justify-center  mb-4 lg:mb-0 lg:w-auto lg:mr-8'>
-            <img
+            <Image
               alt={post.author.name}
               height="30px"
               width="30px"
@@ -48,7 +49,7 @@ const PostCard = ({post}) => {
               className='transition before:duration-200  transform relative before:absolute  
               hover:before:translate-y-1 hover:before:-translate-x-1 before:w-full before:h-full before:bg-[#10162f]'
             >
-              <Link href={`/post/${post.slug}`} >
+              <Link href={`/post/${post.slug}`} passHref={true}>
                 <span 
                   className='cursor-pointer transition duration-200 transform hover:-translate-y-1 hover:translate-x-1 
                   inline-block bg-[#3b10e3]  text-lg font-medium  border border-[#10162f]  text-white px-4 py-3 z-20'

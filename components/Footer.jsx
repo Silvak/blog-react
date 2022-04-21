@@ -5,7 +5,7 @@ import Logo from '../public/Logo.svg'
 import { getCategories } from '../services'
 
 
-const footer = () => {
+const Footer = () => {
   const [categories, setCategories] =  useState([]);
 
   useEffect(()=>{
@@ -59,7 +59,7 @@ const footer = () => {
           <section className='h-[90%] col-span1 md:col-span-3 pt-6 lg:pt-0 lg:border-none  border-t border-t-black'>
             <h5 className='mb-2 font-bold'>CATEGORIES</h5>
             {categories.map((category)=> (
-              <Link key={category.name} href={`/category/${category.slug}`}>
+              <Link key={category.name} href={`/category/${category.slug}`} passHref={true}>
                 <span className='cursor-pointer hover:text-[#3b10e3] transition duration-100 block my-1'>
                   {category.name}
                 </span>
@@ -82,13 +82,13 @@ const footer = () => {
 
         <section className='flex flex-wrap justify-between pointer w-full border-t border-t-black py-4 text-sm'>
           <div className='lg:mr-4 w-full lg:w-auto text-center lg:text-left mb-2'>Privacy Policy  |  Cookie Policy  |  Terms</div>
-          <p className='w-full lg:w-auto text-center lg:text-left'>Made by silvak © 2022 <Link href='/'>Borealis</Link></p>
+          <p className='w-full lg:w-auto text-center lg:text-left'>Made by silvak © 2022 Borealis</p>
         </section>
     </footer>
   )
 }
 
-export default footer
+export default Footer
 
 /**
               

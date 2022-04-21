@@ -4,6 +4,7 @@ import { getCategories } from '../services'
 import Logo from '../public/Logo.svg'
 import Image from 'next/image'
 
+
 const Header = () => {
   const [categories, setCategories] =  useState([]);
 
@@ -21,7 +22,7 @@ const Header = () => {
                     width="50px" 
                     src={Logo} alt="SVG as an image"
                 />
-                <Link href="/">
+                <Link href="/" passHref={true}>
                     <span className='m-auto pl-1 cursor-pointer font-bold text-3xl text-black hover:text-[#3b10e3] transition duration-100'>
                         Borealis
                     </span>
@@ -29,7 +30,7 @@ const Header = () => {
             </div>
             <div className='hidden md:inline-block my-auto'>
                     {categories.map((category)=>(
-                        <Link key={category.slug} href={`/category/${category.slug}`}>
+                        <Link key={category.slug} href={`/category/${category.slug}`} passHref={true}>
                             <span className='p-2 text-black font-semibold cursor-pointer border border-white hover:border-[#3b10e3]  hover:text-[#3b10e3] transition duration-100'>
                                 {category.name}
                             </span>

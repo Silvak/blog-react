@@ -8,8 +8,10 @@ const Author = ({author}) => {
     style={{ backgroundImage: `url('')` }}
     >
       <div className='flex p-2 m-8 lg:m-12 bg-white border border-black'>
-        <div className='w-20 h-20  p-2 border border-[#0f1630]' style={{minWidth:"64px"}}>
-            <img
+        <div className='w-20 h-20  p-2 border border-[#0f1630] min-w-[64px]'>
+            <Image
+              width={64}
+              height={64}
               alt={author.name}
               src={author.photo.url}
               className='object-containt align-middle'
